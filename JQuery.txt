@@ -1,0 +1,95 @@
+//////////// REPLACE PLACE HOLDER
+
+jQuery("div#fotr .et_pb_newsletter_fields input#et_pb_signup_email").attr("placeholder","your@example.com");
+
+
+/////////// SWITCH POSIION OF TEXT
+
+jQuery("div#latest_news article").each(function(){
+    var cat= jQuery(this).find('p.post-meta>a[rel="tag"]').html();
+    jQuery(this).find("h2.entry-title").before('<div class="post_cat">'+cat+'</div>');
+});
+
+
+/////////// TO CHANGE TEXT POSITION
+
+jQuery('.et_pb_post .entry-title').each(function() {
+        jQuery(this).insertBefore(jQuery(this).parent().find('.et_pb_image_container'));
+    });
+
+
+////////// TO CHANGE TITLE
+
+jQuery(".et_pb_social_media_follow_network_4_tb_header a").attr("title", "Follow on Yelp");
+
+////////// TO CHANGE CONTENT
+
+jQuery(".et_password_protected_form h1").html('Protected: Admission Forms (request password from admin)');
+
+
+//////////////// MEDIA QUERY FOR JS
+
+if (jQuery(window).width() <= 768) {
+}
+
+
+//////////////// ADD CLASS
+
+jQuery("div#slider-1 .et_pb_button").addClass('image-effect-circle');
+
+ jQuery(".we-design .et_pb_column").each(function(){
+      jQuery(this).click(function(){
+          jQuery(".we-design .et_pb_column").removeClass("active");
+          jQuery(this).addClass("active");
+      });
+  	 });
+
+
+
+//////////////// ADD validation pattren for phone number with special characters
+
+jQuery("#fotter_form input#et_pb_contact_phone_0").attr("pattern", "[0-9-+()]*$");
+
+
+
+///////////// Blog Category Drop Down 
+
+jQuery("select#cars").on('change',function(){
+    var link = jQuery(this).val();
+    window.open(link);
+});
+
+
+///////////// ADD class on HEADER
+
+jQuery(function() {
+     var header = jQuery("#hadr");
+     jQuery(window).scroll(function() {    
+         var scroll = jQuery(window).scrollTop();
+         if (scroll >= 60) {
+             header.Addattr('class','fixed');
+         } else {
+             header.attr('class','');
+         }
+     });
+ });
+
+
+
+//////////////////// HIDE SHOW
+    jQuery(".logo").show();
+
+    jQuery(".go-branding").click(function(){
+          jQuery(".display_none").hide();
+          jQuery(".branding").show();
+      });
+
+    jQuery(".go-logo").click(function(){
+          jQuery(".display_none").hide();
+          jQuery(".logo").show();
+      });
+
+    jQuery(".go-videoss").click(function(){
+          jQuery(".display_none").hide();
+          jQuery(".videoss").show();
+      });
